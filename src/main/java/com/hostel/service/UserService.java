@@ -1,8 +1,6 @@
 package com.hostel.service;
 
 import com.hostel.domain.User;
-import com.hostel.domain.room.Room;
-import com.hostel.exception.RoomNotFoundException;
 import com.hostel.exception.UserNotFoundException;
 import com.hostel.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -22,14 +21,14 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUserById(Long id){
+    public Optional<User> getUserById(Long id){
         if (userRepository.findById(id).isPresent()) {
-            return userRepository.findById(id).get();
+            return userRepository.findById(id);
         }
         throw new UserNotFoundException();
     }
 
-    public Boolean createUserByName(User user) {
+    public Boolean createUser(User user) {
         try {
             user.setCreated(Timestamp.valueOf(LocalDateTime.now()));
             userRepository.save(user);
@@ -41,7 +40,7 @@ public class UserService {
         return true;
     }
 
-    public Boolean updateUserById(User user) {
+    public Boolean updateUser(User user) {
         try {
             userRepository.saveAndFlush(user);
             log.info(String.format("user id %s was updated", user.getId()));

@@ -1,19 +1,12 @@
 package com.hostel.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 import lombok.Data;
 @Component
 @Data
 @Entity(name = "booking")
-
 public class Booking {
     @Id
     @SequenceGenerator(name = "seq_booking", sequenceName = "booking_id_seq", allocationSize = 1)
@@ -23,8 +16,9 @@ public class Booking {
     @Column(name = "booking_number")
     private String investmentNumber;
 
+    @ManyToOne
     @Column(name = "user_id")
-    private Long userId;
+    private User user;
 
     @Column(name = "number_of_guests")
     private int numberOfGuests;
@@ -40,7 +34,4 @@ public class Booking {
 
     @Column(name = "booking_date")
     private Timestamp bookingDate;
-
-    public void setUser(Long userById) {
-    }
 }

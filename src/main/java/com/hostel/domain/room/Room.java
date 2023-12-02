@@ -1,10 +1,9 @@
 package com.hostel.domain.room;
 
+import com.hostel.domain.Option;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.stereotype.Component;
-
-import java.sql.Timestamp;
 
 @Component
 @Data
@@ -26,6 +25,7 @@ public class Room {
     @Column(name = "room_price")
     private Long roomPrice;
 
-    public void setCreated(Timestamp timestamp) {
-    }
+    @ManyToOne
+    @Column(name = "option")
+    private Option option;
 }

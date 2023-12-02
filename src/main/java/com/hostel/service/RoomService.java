@@ -6,9 +6,9 @@ import com.hostel.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
+
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -24,16 +24,15 @@ public class RoomService {
         return roomRepository.findRoomByType(roomType);
     }
 
-    public Room getRoomById(Long id){
+    public Optional<Room> getRoomById(Long id){
         if (roomRepository.findById(id).isPresent()) {
-            return roomRepository.findById(id).get();
+            return roomRepository.findById(id);
         }
         throw new RoomNotFoundException();
     }
 
     public Boolean createRoom(Room room) {
         try {
-            room.setCreated(Timestamp.valueOf(LocalDateTime.now()));
             roomRepository.save(room);
             log.info(String.format("room with type %s was created", room.getRoomType()));
         } catch (Exception e){

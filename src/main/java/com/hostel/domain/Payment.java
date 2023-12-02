@@ -1,9 +1,13 @@
 package com.hostel.domain;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
+import jakarta.persistence.ManyToOne;
 import org.springframework.stereotype.Component;
-import java.math.BigDecimal;
-import java.sql.Timestamp;
 import lombok.Data;
 
 @Component
@@ -24,10 +28,4 @@ public class Payment {
 
     @Column(name = "payment")
     private Boolean payment;
-
-    public void setPaymentAmount(Double paymentAmount) {
-    }
-
-    public void setPaymentType(String paymentType) {
-    }
 }

@@ -6,21 +6,21 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+
 @Slf4j
 @RequiredArgsConstructor
 @Service
 public class PaymentService {
     private final PaymentRepository paymentRepository;
-    private final UserService userService;
 
-    public void insertPayment(Long id, Long user, String paymentDate, Double paymentAmount, String paymentType) {
-        Payment payment = new Payment();
-
-        payment.setId(id);
-        payment.setPaymentAmount(paymentAmount);
-        payment.setPaymentDate(paymentDate);
-        payment.setPaymentType(paymentType);
-        payment.setUser(userService.getUserById(user));
-        paymentRepository.save(payment);
+    public Boolean createPayment(Payment payment) {
+        try {
+            paymentRepository.save(payment);
+            log.info(String.format("payment %s was created", payment.getId()));
+        } catch (Exception e){
+            log.warn(String.format("have problem with creating payment %s have error %s", payment.getId(), e));
+            return false;
+        }
+        return true;
     }
 }

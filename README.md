@@ -13,7 +13,6 @@ Hostel is an application with REST API architecture for hostel systems. The main
 - Swagger;
 - Maven;
 - JUnit 5;
-- javadoc.
 # Installation
 1. Install Java Development Kit (JDK) on your system.
 2. Install and configure PostgreSQL on your system.

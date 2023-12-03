@@ -4,33 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="387ae41e-05a8-4148-a6b8-7ae2d297bb56" name="Changes" comment="change Domain, Service and Repository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/LoyaltyProgramController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/RoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/dto/BookingCreationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/exception/SameUserInDatabaseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/exception/UserFromDatabaseNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/SpringSecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/controller/SecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/SecurityCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/dto/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/dto/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/dto/RegistrationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/repository/SecurityCredentialsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/service/CustomUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/service/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/service/SecurityService.java" afterDir="false" />
+    <list default="true" id="387ae41e-05a8-4148-a6b8-7ae2d297bb56" name="Changes" comment="Changes and + securiry">
+      <change afterPath="$PROJECT_DIR$/src/test/java/HostelApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/hostel/controller/BookingControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/hostel/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/hostel/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/domain/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/room/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/LoyaltyProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/LoyaltyProgramService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,18 +62,23 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hostel.controller" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn -N io.takari:maven:wrapper" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HostelApplication">
     <configuration name="HostelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hostel.HostelApplication" />
       <module name="Hostel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hostel.*" />
+          <option name="PATTERN" value="com.hostel.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,9 +86,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Hostel [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HostelApplication" />
+        <item itemvalue="Maven.Hostel [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -124,7 +134,7 @@
       <workItem from="1700473925293" duration="1230000" />
       <workItem from="1700495352333" duration="8188000" />
       <workItem from="1700510344656" duration="2111000" />
-      <workItem from="1701448443206" duration="38975000" />
+      <workItem from="1701448443206" duration="41443000" />
     </task>
     <task id="LOCAL-00001" summary="+ some folders">
       <option name="closed" value="true" />
@@ -166,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701529639287</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes and + securiry">
+      <option name="closed" value="true" />
+      <created>1701619979838</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701619979838</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +196,8 @@
     <MESSAGE value="+ wrapper" />
     <MESSAGE value="+ Domain, Service and Repository" />
     <MESSAGE value="change Domain, Service and Repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Domain, Service and Repository" />
+    <MESSAGE value="Changes and + securiry" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes and + securiry" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

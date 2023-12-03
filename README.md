@@ -6,14 +6,14 @@ Hostel is an application with REST API architecture for hostel systems. The main
 - selection of options for room
 - establishing the level of loyalty
 # Technologies
-java 17 version;
-Spring (modules: Spring boot, Spring Data, Spring Security);
-lombok;
-PostgreSQL;
-Swagger;
-Maven;
-JUnit 5;
-javadoc.
+- java 17 version;
+- Spring (modules: Spring boot, Spring Data, Spring Security);
+- lombok;
+- PostgreSQL;
+- Swagger;
+- Maven;
+- JUnit 5;
+- javadoc.
 # Installation
 1. Install Java Development Kit (JDK) on your system.
 2. Install and configure PostgreSQL on your system.

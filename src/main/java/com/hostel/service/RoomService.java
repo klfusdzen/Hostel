@@ -24,11 +24,15 @@ public class RoomService {
         return roomRepository.findRoomByType(roomType);
     }
 
-    public Optional<Room> getRoomById(Long id){
+    public Room getRoomById(Long id){
         if (roomRepository.findById(id).isPresent()) {
-            return roomRepository.findById(id);
+            return roomRepository.findById(id).get();
         }
         throw new RoomNotFoundException();
+    }
+
+    public List<Room> getAllAvailableRooms() {
+        return roomRepository.findAvailableRoomByStatus(Room.RoomStatus.AVAILABLE);
     }
 
     public Boolean createRoom(Room room) {

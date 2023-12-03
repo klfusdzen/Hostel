@@ -28,4 +28,9 @@ public class Room {
     @ManyToOne
     @Column(name = "option")
     private Option option;
+
+    public enum RoomStatus {
+        AVAILABLE,
+        RESERVED
+    }
 }

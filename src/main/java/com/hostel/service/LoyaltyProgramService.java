@@ -1,6 +1,7 @@
 package com.hostel.service;
 
 import com.hostel.domain.LoyaltyProgram;
+import com.hostel.domain.room.Room;
 import com.hostel.exception.LoyaltyNotFoundException;
 import com.hostel.repository.LoyaltyProgramRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,11 +20,15 @@ public class LoyaltyProgramService {
         return loyaltyProgramRepository.findAll();
     }
 
-    public Optional<LoyaltyProgram> getLoyalty(Long id){
-        if (loyaltyProgramRepository.findById(id).isPresent()) {
-            return loyaltyProgramRepository.findById(id);
+    public Boolean createLoyaltyProgram(LoyaltyProgram loyaltyProgram) {
+        try {
+            loyaltyProgramRepository.save(loyaltyProgram);
+            log.info(String.format("loyalty program %s was created", loyaltyProgram.getId()));
+        } catch (Exception e){
+            log.warn(String.format("have problem with creating loyalty program %s have error %s", loyaltyProgram.getId(), e));
+            return false;
         }
-        throw new LoyaltyNotFoundException();
+        return true;
     }
 
     public Boolean changeLoyaltyLevel(LoyaltyProgram loyaltyProgram) {

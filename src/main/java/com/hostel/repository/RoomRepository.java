@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Long>{
-    @Query("SELECT c.roomStatus FROM room c")
+    /*@Query("SELECT c.roomStatus FROM room c")
     List<String> checkRoomStatus();
 
     @Query("SELECT c.roomPrice FROM room c")
@@ -16,6 +16,7 @@ public interface RoomRepository extends JpaRepository<Room, Long>{
 
     @Query("select roomType from room where roomStatus = :free")
     String findFreeRoom(String roomType);
-
+    */
+    List<Room> findAvailableRoomByStatus(Room.RoomStatus roomStatus);
     Room findRoomByType(String roomName);
 }

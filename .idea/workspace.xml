@@ -4,28 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="387ae41e-05a8-4148-a6b8-7ae2d297bb56" name="Changes" comment="+ Domain, Service and Repository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/LoyaltyProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/Option.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/exception/LoyaltyNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/repository/LoyaltyProgramRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/repository/OptionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/LoyaltyProgramService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/OptionService.java" afterDir="false" />
+    <list default="true" id="387ae41e-05a8-4148-a6b8-7ae2d297bb56" name="Changes" comment="change Domain, Service and Repository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/LoyaltyProgramController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/RoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/dto/BookingCreationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/exception/SameUserInDatabaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/exception/UserFromDatabaseNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/SpringSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/controller/SecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/SecurityCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/dto/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/domain/dto/RegistrationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/repository/SecurityCredentialsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/service/CustomUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/service/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hostel/security/service/SecurityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/controller/HomepageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/domain/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/domain/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/domain/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/domain/room/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/repository/BookingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/LoyaltyProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/LoyaltyProgramService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/RoomService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hostel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hostel/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +124,7 @@
       <workItem from="1700473925293" duration="1230000" />
       <workItem from="1700495352333" duration="8188000" />
       <workItem from="1700510344656" duration="2111000" />
-      <workItem from="1701448443206" duration="24726000" />
+      <workItem from="1701448443206" duration="38975000" />
     </task>
     <task id="LOCAL-00001" summary="+ some folders">
       <option name="closed" value="true" />
@@ -153,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701483838487</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change Domain, Service and Repository">
+      <option name="closed" value="true" />
+      <created>1701529639287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701529639287</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +177,8 @@
     <MESSAGE value="+ application.properties" />
     <MESSAGE value="+ wrapper" />
     <MESSAGE value="+ Domain, Service and Repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Domain, Service and Repository" />
+    <MESSAGE value="change Domain, Service and Repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="change Domain, Service and Repository" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

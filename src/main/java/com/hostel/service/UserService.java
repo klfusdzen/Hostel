@@ -21,9 +21,9 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<User> getUserById(Long id){
+    public User getUserById(Long id){
         if (userRepository.findById(id).isPresent()) {
-            return userRepository.findById(id);
+            return userRepository.findById(id).get();
         }
         throw new UserNotFoundException();
     }

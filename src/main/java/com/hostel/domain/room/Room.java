@@ -25,9 +25,8 @@ public class Room {
     @Column(name = "room_price")
     private Long roomPrice;
 
-    @ManyToOne
     @Column(name = "option")
-    private Option option;
+    private String option;
 
     public enum RoomStatus {
         AVAILABLE,

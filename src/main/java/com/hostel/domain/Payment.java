@@ -22,9 +22,8 @@ public class Payment {
     @Column(name = "payment_date")
     private String paymentDate;
 
-    @ManyToOne
     @Column(name = "user_id")
-    private User user;
+    private String user;
 
     @Column(name = "payment")
     private Boolean payment;

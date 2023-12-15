@@ -16,9 +16,8 @@ public class Booking {
     @Column(name = "booking_number")
     private String investmentNumber;
 
-    @ManyToOne
     @Column(name = "user_id")
-    private User user;
+    private String user;
 
     @Column(name = "number_of_guests")
     private int numberOfGuests;

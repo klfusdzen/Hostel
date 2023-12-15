@@ -13,9 +13,8 @@ public class LoyaltyProgram {
     @GeneratedValue(generator = "seq_loyaltyProgram", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @ManyToOne
     @Column(name = "user_id")
-    private User user;
+    private String user;
 
     @Column(name = "level")
     private String level;
